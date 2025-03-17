@@ -7,3 +7,4 @@ xhofe/alist:latest
 allanpk716/chinesesubfinder
 idootop/mi-gpt
 justsong/one-api
+lmk123/migpt-server
