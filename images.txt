@@ -9,4 +9,4 @@ idootop/mi-gpt
 idootop/mi-gpt-tts
 justsong/one-api
 homeassistant/home-assistant
-m1k1o/neko/microsoft-edge
+m1k1o/neko/chromium
