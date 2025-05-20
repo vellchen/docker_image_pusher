@@ -9,4 +9,4 @@ idootop/mi-gpt
 idootop/mi-gpt-tts
 justsong/one-api
 homeassistant/home-assistant
-node:18-alpine
+library/node:18-alpine
