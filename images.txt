@@ -10,3 +10,4 @@ idootop/mi-gpt-tts
 justsong/one-api
 homeassistant/home-assistant
 library/node:18-alpine
+nginx:stable-alpine
