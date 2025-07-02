@@ -7,3 +7,4 @@ library/node:18-alpine
 nginx:stable-alpine
 openlistteam/openlist:beta
 tsaridas/stremio-docker:latest
+unilei/aipan-netdisk-search-simple:latest
