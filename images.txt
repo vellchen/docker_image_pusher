@@ -8,6 +8,6 @@ nginx:stable-alpine
 openlistteam/openlist:beta
 tsaridas/stremio-docker:latest
 unilei/aipan-netdisk-search-simple:latest
-kodcloud/kodbox:latest
+kodcloud/kodbox:latest --platform=linux/arm64
 mariadb:lts
 redis:alpine
