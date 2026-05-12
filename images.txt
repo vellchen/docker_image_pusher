@@ -1,1 +1,1 @@
---platform linux/arm64 lomorage/raspberrypi-lomorage:latest
+lomorage/arm64-lomorage:latest
