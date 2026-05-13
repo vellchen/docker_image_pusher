@@ -1,1 +1,1 @@
-lomorage/arm64-lomorage:latest
+--platform=linux_arm64 photoprism/photoprism:latest
