@@ -1,1 +1,1 @@
---platform=linux_arm64 photoprism/photoprism:latest
+--platform=linux/arm64 photoprism/photoprism:latest
