@@ -1,1 +1,1 @@
---platform=linux/arm64 photoprism/photoprism:latest
+ponphil/litepan:latest
