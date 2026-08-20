@@ -1,1 +1,1 @@
-ponphil/litepan:v0.5.0-beta
+ponphil/litepan:v0.5.1-beta
