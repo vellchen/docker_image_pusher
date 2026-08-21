@@ -1,2 +1,3 @@
 ponphil/litepan:v0.5.1-beta
 homeassistant/home-assistant:2026.8.2
+openlistteam/openlist:v4.2.5
