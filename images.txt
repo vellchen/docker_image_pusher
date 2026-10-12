@@ -1,2 +1,2 @@
-rebeliptv/iptv:1.4.8
+akiralereal/iptv:4.33.0
 ponphil/litepan:v0.5.7-beta
