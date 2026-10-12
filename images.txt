@@ -1,2 +1,2 @@
-akiralereal/iptv:4.33.0
+hurryos/iptvs-app:latest
 ponphil/litepan:v0.5.7-beta
