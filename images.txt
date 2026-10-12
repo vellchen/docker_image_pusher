@@ -1,2 +1,2 @@
-hurryos/iptvs-app:a52ae88d26f3da72c220810fad651514de20542a
+hurryos/iptvs-app:aaa27767d9d21440bb3fa6b62451fa456f89ad5a
 ponphil/litepan:v0.5.7-beta
