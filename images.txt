@@ -1,2 +1,2 @@
-hurryos/iptvs-app:3.0.0
+hurryos/iptvs-app:v3.0.0
 ponphil/litepan:v0.5.7-beta
