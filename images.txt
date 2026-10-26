@@ -1,2 +1,1 @@
-akiralereal/iptv:4.36.0
-ponphil/litepan:v0.5.7-beta
+akiralereal/iptv:4.49.2
