@@ -5,7 +5,6 @@ on:
   push:
     branches: [ main ]
 
-
 env:
   ALIYUN_REGISTRY: "${{ secrets.ALIYUN_REGISTRY }}"
   ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
@@ -13,36 +12,21 @@ env:
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
 
 jobs:
-
   build:
     name: Pull
     runs-on: ubuntu-latest
     steps:
-    - name: Before freeing up disk space
-      run: |
-        echo "Before freeing up disk space"
-        echo "=============================================================================="
-        df -hT
-        echo "=============================================================================="
-
-    # 增加可用磁盘空间
-    - name: Maximize build space
-      uses: easimon/maximize-build-space@master
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@main
       with:
+        tool-cache: false
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        swap-storage: true
 
-        root-reserve-mb: 2048
-        swap-size-mb: 128
-        remove-dotnet: 'true'
-        remove-haskell: 'true'
-        # 如果空间还是不够用，可以把以下开启，清理出更多空间
-        # remove-android: 'true'
-        # remove-codeql: 'true'
-        build-mount-path: '/var/lib/docker/'
-
-    - name: Restart docker
-      run: sudo service docker restart
-
-    - name: Free up disk space complete
+    - name: Check Disk Space
       run: |
         echo "Free up disk space complete"
         echo "=============================================================================="
@@ -58,6 +42,7 @@ jobs:
     - name: Build and push image Aliyun
       run: |
         docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
+        
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
         declare -A temp_map
@@ -147,11 +132,18 @@ jobs:
             echo "=============================================================================="
             df -hT
             echo "=============================================================================="
+            
+            # 删除拉取的源镜像和打完标签的镜像
             docker rmi $image
             docker rmi $new_image
+            
+            # 强制清理悬空镜像（中间层等），释放 containerd / docker 空间
+            docker image prune -f
+            
             echo "磁盘空间清理完毕"
             echo "=============================================================================="
             df -hT
             echo "=============================================================================="     
             
         done < images.txt
+        
