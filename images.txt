@@ -1,1 +1,2 @@
 akiralereal/iptv:4.51.2
+hurryos/iptvs-app:latest
