@@ -1,2 +1,1 @@
-akiralereal/iptv:4.51.2
-hurryos/iptvs-app:latest
+akiralereal/iptv:4.58.0
